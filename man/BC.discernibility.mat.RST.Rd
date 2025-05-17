@@ -4,8 +4,12 @@
 \alias{BC.discernibility.mat.RST}
 \title{Computation of a decision-relative discernibility matrix based on the rough set theory}
 \usage{
-BC.discernibility.mat.RST(decision.table, range.object = NULL,
-  return.matrix = FALSE, attach.data = FALSE)
+BC.discernibility.mat.RST(
+  decision.table,
+  range.object = NULL,
+  return.matrix = FALSE,
+  attach.data = FALSE
+)
 }
 \arguments{
 \item{decision.table}{an object inheriting from the \code{DecisionTable} class, which represents a decision system. 
@@ -56,9 +60,6 @@ disc.matrix <- BC.discernibility.mat.RST(hiring.data, return.matrix = TRUE)
 disc.matrix
 
 }
-\author{
-Lala Septem Riza and Andrzej Janusz
-}
 \references{
 A. Skowron and C. Rauszer,  
 "The Discernibility Matrices and Functions in Information Systems", 
@@ -70,4 +71,6 @@ p. 331 - 362 (1992).
 \code{\link{BC.IND.relation.RST}}, \code{\link{BC.LU.approximation.RST}}, \code{\link{BC.LU.approximation.FRST}}
          and \code{\link{BC.discernibility.mat.FRST}}
 }
-
+\author{
+Lala Septem Riza and Andrzej Janusz
+}

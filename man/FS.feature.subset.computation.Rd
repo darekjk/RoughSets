@@ -4,8 +4,11 @@
 \alias{FS.feature.subset.computation}
 \title{The superreduct computation based on RST and FRST}
 \usage{
-FS.feature.subset.computation(decision.table,
-  method = "greedy.heuristic.superreduct", ...)
+FS.feature.subset.computation(
+  decision.table,
+  method = "greedy.heuristic.superreduct",
+  ...
+)
 }
 \arguments{
 \item{decision.table}{an object of a \code{"DecisionTable"} class representing a decision table. See \code{\link{SF.asDecisionTable}}.}
@@ -62,10 +65,9 @@ res.2 <- FS.feature.subset.computation(decision.table,
 ## generate new decision table according to the reduct
 new.decTable <- SF.applyDecTable(decision.table, res.2)
 }
-\author{
-Andrzej Janusz
-}
 \seealso{
 \code{\link{FS.greedy.heuristic.superreduct.RST}}, \code{\link{FS.quickreduct.RST}}, \code{\link{FS.quickreduct.FRST}}.
 }
-
+\author{
+Andrzej Janusz
+}

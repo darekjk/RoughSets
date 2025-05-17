@@ -4,8 +4,11 @@
 \alias{FS.permutation.heuristic.reduct.RST}
 \title{The permutation heuristic algorithm for computation of a decision reduct}
 \usage{
-FS.permutation.heuristic.reduct.RST(decision.table, permutation = NULL,
-  decisionIdx = ncol(decision.table))
+FS.permutation.heuristic.reduct.RST(
+  decision.table,
+  permutation = NULL,
+  decisionIdx = ncol(decision.table)
+)
 }
 \arguments{
 \item{decision.table}{an object of a \code{"DecisionTable"} class representing a decision table. See \code{\link{SF.asDecisionTable}}.}
@@ -66,9 +69,6 @@ print(res.2)
 ## generate new decision table according to the reduct
 new.decTable <- SF.applyDecTable(decision.table, res.1)
 }
-\author{
-Andrzej Janusz
-}
 \references{
 A. Janusz and D. Ślęzak, "Utilization of Attribute Clustering Methods for Scalable Computation of Reducts from High-Dimensional Data".
 Proceedings of Federated Conference on Computer Science and Information Systems - FedCSIS, p. 295 - 302 (2012).
@@ -79,4 +79,6 @@ Clustering and Selection". Applied Artificial Intelligence, 28(3):220–242, 201
 \seealso{
 \code{\link{FS.quickreduct.RST}} and \code{\link{FS.reduct.computation}}.
 }
-
+\author{
+Andrzej Janusz
+}

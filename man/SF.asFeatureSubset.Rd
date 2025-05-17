@@ -4,8 +4,13 @@
 \alias{SF.asFeatureSubset}
 \title{Converting custom attribute name sets into a FeatureSubset object}
 \usage{
-SF.asFeatureSubset(colNames, decisionTable = NULL, attributeNames = NULL,
-  type.method = "custom subset", model = "custom")
+SF.asFeatureSubset(
+  colNames,
+  decisionTable = NULL,
+  attributeNames = NULL,
+  type.method = "custom subset",
+  model = "custom"
+)
 }
 \arguments{
 \item{colNames}{a character vector containing names of attributes from a decision table}
@@ -46,8 +51,8 @@ class(attrNames)
 
 ## convertion into a FeatureSubset object
 reduct <- SF.asFeatureSubset(attrNames, wine.data,
-                             type.method = "greedy reduct from a discernibility matrix",
-                             model = reduct$type.model)
+                             type.method = "greedy reduct from a discernibility matrix")
+
 class(reduct)
 reduct
 
@@ -55,4 +60,3 @@ reduct
 \author{
 Andrzej Janusz
 }
-

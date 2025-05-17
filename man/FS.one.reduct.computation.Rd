@@ -4,14 +4,21 @@
 \alias{FS.one.reduct.computation}
 \title{Computing one reduct from a discernibility matrix}
 \usage{
-FS.one.reduct.computation(discernibilityMatrix, greedy = TRUE, power = 1)
+FS.one.reduct.computation(
+  discernibilityMatrix,
+  greedy = TRUE,
+  sampSize = 5,
+  power = 1
+)
 }
 \arguments{
 \item{discernibilityMatrix}{a \code{"DiscernibilityMatrix"} class representing the discernibility matrix of RST and FRST.}
 
-\item{greedy}{a boolean value indicating whether the greedy heuristic or a randomized search should be used in computations.}
+\item{greedy}{a boolean value indicating whether the greedy heuristic or a stochastic search should be used in computations.}
 
-\item{power}{a numeric representing a parameter of the randomized search heuristic.}
+\item{sampSize}{an integer indicating the sample size for the stochastic search heuristic.}
+
+\item{power}{a numeric representing a parameter of the stochastic search heuristic.}
 }
 \value{
 An object of a class \code{"ReductSet"}.
@@ -57,9 +64,6 @@ reduct <- FS.one.reduct.computation(res.2)
 ## generate new decision table
 new.decTable <- SF.applyDecTable(decision.table, reduct, control = list(indx.reduct = 1))
 }
-\author{
-Andrzej Janusz
-}
 \references{
 Jan G. Bazan, Hung Son Nguyen, Sinh Hoa Nguyen, Piotr Synak, and Jakub Wroblewski,
 "Rough Set Algorithms in Classification Problem", Chapter 2
@@ -69,4 +73,6 @@ Physica-Verlag, Heidelberg, New York, p. 49 - 88 ( 2000).
 \seealso{
 \code{\link{BC.discernibility.mat.RST}} and \code{\link{BC.discernibility.mat.FRST}}.
 }
-
+\author{
+Andrzej Janusz
+}

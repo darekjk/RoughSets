@@ -34,7 +34,7 @@ This is a function that implements the fuzzy-rough instance selection (FRIS) pro
 }
 \details{
 FRIS is used to remove training instances that cause conflicts with other instances as 
-determined by the fuzzy positive region.
+determined by the fuzzy positive region. 
 
 This algorithm evaluates the degree of membership of each instance to the fuzzy positive region.
 If there is a instance less than the threshold, then the instance can be removed. 
@@ -71,9 +71,6 @@ res.1 <- IS.FRIS.FRST(decision.table = decision.table, control =
 new.decTable <- SF.applyDecTable(decision.table, res.1)
 
 }
-\author{
-Lala Septem Riza
-}
 \references{
 R. Jensen and C. Cornelis, "Fuzzy-rough Instance Selection",
 Proceedings of the 19th International Conference on Fuzzy Systems (FUZZ-IEEE 2010), 
@@ -82,4 +79,6 @@ p. 1776 - 1782 (2010).
 \seealso{
 \code{\link{IS.FRPS.FRST}}.
 }
-
+\author{
+Lala Septem Riza
+}

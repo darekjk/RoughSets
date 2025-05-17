@@ -4,10 +4,15 @@
 \alias{FS.greedy.heuristic.reduct.RST}
 \title{The greedy heuristic algorithm for computing decision reducts and approximate decision reducts}
 \usage{
-FS.greedy.heuristic.reduct.RST(decision.table,
+FS.greedy.heuristic.reduct.RST(
+  decision.table,
   attrDescriptions = attr(decision.table, "desc.attrs"),
-  decisionIdx = attr(decision.table, "decision.attr"), qualityF = X.gini,
-  nAttrs = NULL, epsilon = 0, inconsistentDecisionTable = NULL)
+  decisionIdx = attr(decision.table, "decision.attr"),
+  qualityF = X.gini,
+  nAttrs = NULL,
+  epsilon = 0,
+  inconsistentDecisionTable = NULL
+)
 }
 \arguments{
 \item{decision.table}{an object of a \code{"DecisionTable"} class representing a decision table. See \code{\link{SF.asDecisionTable}}.}
@@ -90,9 +95,6 @@ res.1 <- FS.greedy.heuristic.reduct.RST(decision.table, qualityF = X.entropy,
 ## generate a new decision table corresponding to the reduct
 new.decTable <- SF.applyDecTable(decision.table, res.1)
 }
-\author{
-Andrzej Janusz
-}
 \references{
 Andrzej Janusz and Dominik Slezak. "Rough Set Methods for Attribute
 Clustering and Selection". Applied Artificial Intelligence, 28(3):220–242, 2014.
@@ -107,4 +109,6 @@ J. Wróblewski, "Ensembles of Classifiers Based on Approximate Reducts", Fundame
 \seealso{
 \code{\link{FS.DAAR.heuristic.RST}} and \code{\link{FS.reduct.computation}}.
 }
-
+\author{
+Andrzej Janusz
+}

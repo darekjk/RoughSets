@@ -4,9 +4,14 @@
 \alias{D.global.discernibility.heuristic.RST}
 \title{Supervised discretization based on the maximum discernibility heuristic}
 \usage{
-D.global.discernibility.heuristic.RST(decision.table, maxNOfCuts = 2 *
-  ncol(decision.table), attrSampleSize = ncol(decision.table) - 1,
-  cutCandidatesList = NULL, discFunction = global.discernibility, ...)
+D.global.discernibility.heuristic.RST(
+  decision.table,
+  maxNOfCuts = 2 * ncol(decision.table),
+  attrSampleSize = ncol(decision.table) - 1,
+  cutCandidatesList = NULL,
+  discFunction = global.discernibility,
+  ...
+)
 }
 \arguments{
 \item{decision.table}{an object inheriting from the \code{"DecisionTable"} class, which represents a decision system.
@@ -68,9 +73,6 @@ sum(duplicated(wine.discretized.reduced)) == sum(duplicated(wine.discretized.red
 ## yes it is
 
 }
-\author{
-Andrzej Janusz
-}
 \references{
 S. H. Nguyen, "On Efficient Handling of Continuous Attributes in Large Data Bases",
 Fundamenta Informaticae, vol. 48, p. 61 - 81 (2001).
@@ -85,4 +87,6 @@ Physica-Verlag, Heidelberg, New York, p. 49 - 88 ( 2000).
          \code{\link{D.local.discernibility.heuristic.RST}} and \code{\link{SF.applyDecTable}}.
          A wrapper function for all available discretization methods: \code{\link{D.discretization.RST}}
 }
-
+\author{
+Andrzej Janusz
+}
